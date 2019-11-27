@@ -19,8 +19,13 @@ function App() {
     setValue: setLocale
   };
 
+  const styles = {
+    backgroundColor: theme === "dark" ? "black" : "white",
+    color: theme === "dark" ? "white" : "black"
+  };
+
   return (
-    <div className="App">
+    <div className="App" style={styles}>
       <AppThemeContext.Provider value={themeContextValue}>
         <AppLocaleContext.Provider value={localeContextValue}>
           <ContextValueIndicator />
